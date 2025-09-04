@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe Adventure</title>
+  <link rel="stylesheet" href="tic-tac-toe.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Home Page -->
+    <div id="home" class="home">
+      <h1 class="text-4xl font-bold mb-4" style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        Tic-Tac-Toe Adventure
+      </h1>
+      <p class="mb-4">Embark on a unique gaming experience with exciting themes and epic victories!</p>
+      
+      <div class="mode-selector">
+        <h3 class="text-lg mb-2">Game Mode</h3>
+        <label class="mr-4">
+          <input type="radio" name="mode" value="pvp" checked> Human vs Human
+        </label>
+        <label>
+          <input type="radio" name="mode" value="pvc"> Human vs AI Master
+        </label>
+      </div>
+      
+      <div class="theme-selector">
+        <h3 class="text-lg mb-2">Theme</h3>
+        <label class="mr-4">
+          <input type="radio" name="theme" value="classic" checked> Classic
+        </label>
+        <label class="mr-4">
+          <input type="radio" name="theme" value="animals"> Mythical Beasts
+        </label>
+        <label>
+          <input type="radio" name="theme" value="fruits"> Enchanted Fruits
+        </label>
+      </div>
+      
+      <button id="startBtn" class="btn">Begin Adventure</button>
+    </div>
+    
+    <!-- Game Page -->
+    <div id="game" class="game">
+      <h1 class="text-2xl font-bold mb-2" style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        Tic-Tac-Toe
+      </h1>
+      <div id="score" class="score">Wins: 0 | Losses: 0 | Ties: 0</div>
+      <div id="status" class="status">Time to play!</div>
+      
+      <div id="board" class="board">
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+      </div>
+      
+      <div class="text-center">
+        <button id="resetBtn" class="btn">Reset Quest</button>
+        <button id="homeBtn" class="btn">Back to Home</button>
+      </div>
+    </div>
+    
+    <!-- Exciting win effects -->
+    <div id="confetti" class="confetti"></div>
+    <div id="fireworks" class="fireworks"></div>
+    <div id="trophy" class="trophy">TROPHY</div>
+  </div>
+
+  <script src="tic-tac-toe.js"></script>
+</body>
+</html>
